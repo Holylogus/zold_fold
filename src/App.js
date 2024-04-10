@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { Form } from 'react-bootstrap';
 import './App.css';
+import useApiContext from './contexts/ApiContext';
 
 function App() {
+  const [bejegyzesek, getBejegyzesek] = useApiContext();
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form>
+        <Form.Group controlId="form-group-id">
+         Mit Tettél ma a Földért?
+         <Form.Select aria-label="select">
+          
+          <option>Choose...</option>
+          <option>...</option>
+         </Form.Select>
+        </Form.Group>
+      </Form>
     </div>
   );
 }
