@@ -3,7 +3,7 @@ import './App.css';
 import useApiContext from './contexts/ApiContext';
 
 function App() {
-  const [bejegyzesek, getBejegyzesek] = useApiContext();
+  const [tevekenysegek, setTevekenysegek] = useApiContext();
 
 
   return (

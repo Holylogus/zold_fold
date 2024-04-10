@@ -4,11 +4,11 @@ import axios from "../api/axois"
 export const ApiContext = createContext();
 
 export const ApiProvider = ({ children }) => {
-    const [tevekenysegek, setBejegyzesek] = useState();
+    const [tevekenysegek, setTevekenysegek] = useState();
     //Ide lehet api hívásokat kérni
     const getTevekenysegek = async () => {
-        const { data } = await axios.get("/tevekenysegek");
-        getTevekenysegek(data);
+        const { data } = await axios.get("/api/tevekenysegek");
+        setTevekenysegek(data);
     };
 
   
